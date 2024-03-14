@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "paths": {
+    "/payment/razorpay": {
+      "name": "/payment/razorpay",
+      "lambdaFunction": "paymentfunction",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/capture": {
+      "name": "/capture",
+      "lambdaFunction": "paymentfunction",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "api": {
+    "apib0611b09": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "paymentfunction"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "capture": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "paymentfunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_capture_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "capture"
+        }
+      ]
+    },
+    "AMPLIFY_function_capture_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "capture"
+        }
+      ]
+    },
+    "AMPLIFY_function_paymentfunction_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "paymentfunction"
+        }
+      ]
+    },
+    "AMPLIFY_function_paymentfunction_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "paymentfunction"
+        }
+      ]
+    }
+  }
+}
